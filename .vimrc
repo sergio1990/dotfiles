@@ -1,8 +1,6 @@
 call plug#begin('~/.vim/plugged')
 "===> Core
 Plug 'https://github.com/scrooloose/nerdtree.git'
-" A plugin of NERDTree showing git status
-"Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline'
 Plug 'marcweber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
@@ -15,10 +13,11 @@ Plug 'easymotion/vim-easymotion'
 Plug 'mileszs/ack.vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
-"Plug 'scrooloose/syntastic', { 'tag': 'v3.7.0' }
 Plug 'tpope/vim-fugitive'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'cyphactor/vim-open-alternate'
+" nerdcommenter and tcomment_vim are alternatives? Investigate the both and
+" end up with only one.
 Plug 'scrooloose/nerdcommenter'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-surround'
@@ -32,24 +31,16 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
 " A Narrow Region Plugin for vim (like Emacs Narrow Region)
 Plug 'chrisbra/NrrwRgn'
-" A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
-"Plug 'airblade/vim-gitgutter'
 " Refactoring tool for Ruby in vim!
 Plug 'ecomba/vim-ruby-refactoring'
 " A vim plugin that simplifies the transition between multiline and single-line code
 Plug 'AndrewRadev/splitjoin.vim'
 " Highlight the flooding part of an overly long line.
 "Plug 'whatyouhide/vim-lengthmatters'
-Plug 'mattreduce/vim-mix'
-Plug 'https://github.com/c-brenn/mix-test.vim.git'
 Plug 'noprompt/vim-yardoc'
-Plug 'https://github.com/heavenshell/vim-jsdoc'
-"Plug 'ashisha/image.vim'
 Plug 'slashmili/alchemist.vim'
 Plug 'chrisbra/csv.vim'
 "===> Langs
-Plug 'vim-scripts/Arduino-syntax-file'
-Plug 'tpope/vim-cucumber'
 Plug 'elixir-lang/vim-elixir'
 Plug 'jimenezrick/vimerl'
 Plug 'tpope/vim-git'
@@ -61,30 +52,17 @@ Plug 'tpope/vim-markdown'
 Plug 'shime/vim-livedown', { 'ref': '9a881c4ef7113df6d6f81830da8b07c0462ddbf9'}
 Plug 'tpope/vim-rails'
 Plug 'hallison/vim-rdoc'
-"Plug 'skwp/vim-rspec'
-Plug '~/Work/vimdev/vim-rspec'
 Plug 'vim-ruby/vim-ruby'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'slim-template/vim-slim'
-"Plug 'https://github.com/kennethzfeng/vim-raml'
-"Plug 'derekwyatt/vim-scala', { 'ref': '16beb5378b487c2ddbdc9ed7241b145cd2df33f4' }
 Plug 'unifieddialog/vim-rspec-focus', { 'ref': 'bfa0265b3c38e03ffda492b3d59b42efae569130' }
-"Plug 'Glench/Vim-Jinja2-Syntax', { 'ref': '1d525a8cb4bcdc4311f42e8523467547e67aa983' }
 "===> Themes
 Plug 'altercation/vim-colors-solarized'
-Plug 'kristijanhusak/vim-hybrid-material'
-Plug 'telamon/vim-color-github'
 
 call plug#end()
 
 let mapleader = ","
 syntax enable
-
-"====== GUI setupping
-"set t_Co=256
-" set background=dark
-"colorscheme hybrid_material
-"color hybrid_material
 
 let g:airline_powerline_fonts = 1
 
@@ -143,11 +121,6 @@ nnoremap <leader>. :OpenAlternate<cr>
 let g:rspec_runner = "os_x_iterm2"
 let g:RspecBin = "bin/rspec"
 
-let g:mix_test_runner = "os_x_iterm2"
-
-map <Leader>t :call MixRunCurrentTestFile()<CR>
-map <Leader>a :call MixRunAllTests()<CR>
-
 " Command-/ to toggle comments
 map <D-/> :TComment<CR>
 imap <D-/> <Esc>:TComment<CR>i
@@ -165,32 +138,9 @@ set cursorline
 set nowrap
 " END Stop line wrapping
 
-
-func! ShowAwesomeComplete()
-  call complete(col('.'), ['this', 'another'])
-  return ''
-endfunc
-
-inoremap <F2> <C-R>=ShowAwesomeComplete()<CR>
-
 "====== Colorcolumn
 set colorcolumn=100
 " END Colorcolumn
-
-"====== Syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-"let g:syntastic_ruby_checkers          = ['rubocop']
-"let g:syntastic_enable_signs=1
-" END Syntastic settings
-"
-nmap <silent> <C-l> <Plug>(jsdoc)
 
 nmap gm :LivedownToggle<CR>
 
