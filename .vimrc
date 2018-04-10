@@ -21,7 +21,7 @@ Plug 'cyphactor/vim-open-alternate'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-surround'
-Plug 'ap/vim-css-color'
+Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'less', 'sass'] }
 Plug 'terryma/vim-multiple-cursors'
 " Perform all your vim insert mode completions with Tab
 Plug 'ervandew/supertab'
@@ -32,30 +32,28 @@ Plug 'tpope/vim-eunuch'
 " A Narrow Region Plugin for vim (like Emacs Narrow Region)
 Plug 'chrisbra/NrrwRgn'
 " Refactoring tool for Ruby in vim!
-Plug 'ecomba/vim-ruby-refactoring'
+Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
 " A vim plugin that simplifies the transition between multiline and single-line code
 Plug 'AndrewRadev/splitjoin.vim'
-" Highlight the flooding part of an overly long line.
-"Plug 'whatyouhide/vim-lengthmatters'
-Plug 'noprompt/vim-yardoc'
-Plug 'slashmili/alchemist.vim'
-Plug 'chrisbra/csv.vim'
+Plug 'noprompt/vim-yardoc', { 'for': 'ruby' }
+Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
+Plug 'chrisbra/csv.vim', { 'for': 'csv' }
 "===> Langs
-Plug 'elixir-lang/vim-elixir'
-Plug 'jimenezrick/vimerl'
+Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug 'jimenezrick/vimerl', { 'for': ['elixir', 'erlang'] }
 Plug 'tpope/vim-git'
-Plug 'tpope/vim-haml'
-Plug 'pangloss/vim-javascript'
-Plug 'elzr/vim-json'
-Plug 'groenewege/vim-less'
-Plug 'tpope/vim-markdown'
-Plug 'shime/vim-livedown', { 'ref': '9a881c4ef7113df6d6f81830da8b07c0462ddbf9'}
-Plug 'tpope/vim-rails'
-Plug 'hallison/vim-rdoc'
-Plug 'vim-ruby/vim-ruby'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'slim-template/vim-slim'
-Plug 'unifieddialog/vim-rspec-focus', { 'ref': 'bfa0265b3c38e03ffda492b3d59b42efae569130' }
+Plug 'tpope/vim-haml', { 'for': 'haml' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'elzr/vim-json', { 'for': 'json' }
+Plug 'groenewege/vim-less', { 'for': 'less' }
+Plug 'tpope/vim-markdown', { 'for': 'markdown' }
+Plug 'shime/vim-livedown', { 'ref': '9a881c4ef7113df6d6f81830da8b07c0462ddbf9', 'for': 'markdown' }
+Plug 'tpope/vim-rails', { 'for': 'ruby' }
+Plug 'hallison/vim-rdoc', { 'for': 'ruby' }
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'sass'] }
+Plug 'slim-template/vim-slim', { 'for': ['slim'] }
+Plug 'unifieddialog/vim-rspec-focus', { 'ref': 'bfa0265b3c38e03ffda492b3d59b42efae569130', 'for': 'ruby' }
 "===> Themes
 Plug 'altercation/vim-colors-solarized'
 
