@@ -64,10 +64,13 @@ syntax enable
 
 let g:airline_powerline_fonts = 1
 
+if !has("gui_running")
+  set term=xterm-256color
+endif
+
 set background=dark
 " For valid color presenting in iTerm2 with solarized color preset
 let g:solarized_termcolors = 16
-set term=xterm-256color
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 colorscheme solarized
@@ -172,3 +175,6 @@ if has("clipboard")
     set clipboard+=unnamedplus
   endif
 endif
+
+" Reload vimr configuration file
+nnoremap <Leader>vr :source $MYVIMRC<CR>
