@@ -178,3 +178,7 @@ endif
 
 " Reload vimr configuration file
 nnoremap <Leader>vr :source $MYVIMRC<CR>
+
+" vim-rspec-focus
+nnoremap <leader>af :AddFocusTag<CR>
+nnoremap <leader>raf :RemoveAllFocusTags<CR>
