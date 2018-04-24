@@ -29,4 +29,4 @@ Also, be aware, that there is a `.gvimrc` file, which overrides Vim settings onl
 
 ### tmux
 
-...
+tmux could be extended as well. For that there is the package manager, which is called [tpm](https://github.com/tmux-plugins/tpm). Work with the tpm requires some manual actions to be able to install plugins. Please, follow the instructions inside the tpm repository.
