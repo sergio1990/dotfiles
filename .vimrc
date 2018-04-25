@@ -1,64 +1,64 @@
 call plug#begin('~/.vim/plugged')
 "===> Core
-Plug 'https://github.com/scrooloose/nerdtree.git'
-Plug 'vim-airline/vim-airline'
-Plug 'marcweber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree', { 'ref': 'cc60495' }
+Plug 'marcweber/vim-addon-mw-utils', { 'ref': '295862b'}
+Plug 'tomtom/tlib_vim', { 'ref': 'ced8f3e' }
+Plug 'kien/ctrlp.vim', { 'ref': '564176f' }
 " Toggle the cursor shape in the terminal for Vim
-Plug 'jszakmeister/vim-togglecursor'
+Plug 'jszakmeister/vim-togglecursor', { 'ref': 'b1acd53' }
 
-"===> Tools
-Plug 'easymotion/vim-easymotion'
-Plug 'mileszs/ack.vim'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
-Plug 'tpope/vim-fugitive'
-Plug 'michaeljsmith/vim-indent-object'
-Plug 'cyphactor/vim-open-alternate'
-" nerdcommenter and tcomment_vim are alternatives? Investigate the both and
-" end up with only one.
-Plug 'scrooloose/nerdcommenter'
-Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-surround'
-Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'less', 'sass'] }
-Plug 'terryma/vim-multiple-cursors'
-" Perform all your vim insert mode completions with Tab
-Plug 'ervandew/supertab'
-" endwise.vim: wisely add `end` in ruby, endfunction/endif/more in vim script,
-Plug 'tpope/vim-endwise'
-" Vim sugar for the UNIX shell commands that need it the most.
-Plug 'tpope/vim-eunuch'
-" A Narrow Region Plugin for vim (like Emacs Narrow Region)
-Plug 'chrisbra/NrrwRgn'
-" Refactoring tool for Ruby in vim!
-Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
-" A vim plugin that simplifies the transition between multiline and single-line code
-Plug 'AndrewRadev/splitjoin.vim'
-Plug 'noprompt/vim-yardoc', { 'for': 'ruby' }
-Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
-Plug 'chrisbra/csv.vim', { 'for': 'csv' }
-"===> Langs
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
-Plug 'jimenezrick/vimerl', { 'for': ['elixir', 'erlang'] }
-Plug 'tpope/vim-git'
-Plug 'tpope/vim-haml', { 'for': 'haml' }
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'elzr/vim-json', { 'for': 'json' }
-Plug 'groenewege/vim-less', { 'for': 'less' }
-Plug 'tpope/vim-markdown', { 'for': 'markdown' }
-Plug 'shime/vim-livedown', { 'ref': '9a881c4ef7113df6d6f81830da8b07c0462ddbf9', 'for': 'markdown' }
-Plug 'tpope/vim-rails', { 'for': 'ruby' }
-Plug 'hallison/vim-rdoc', { 'for': 'ruby' }
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'sass'] }
-Plug 'slim-template/vim-slim', { 'for': ['slim'] }
-Plug 'unifieddialog/vim-rspec-focus', { 'ref': 'bfa0265b3c38e03ffda492b3d59b42efae569130', 'for': 'ruby' }
-Plug 'ngmy/vim-rubocop', { 'for': 'ruby', 'ref': '1c57918086d22cc9db829125f6b78226feae86a3' }
-"===> Themes
+"===> GUI & Themes
 Plug 'vim-airline/vim-airline-themes', { 'ref': 'd60b344fd04d322749354e96660735a23df461ba' }
 Plug 'altercation/vim-colors-solarized', { 'ref': '528a59f26d12278698bb946f8fb82a63711eec21' }
+Plug 'vim-airline/vim-airline', { 'ref': 'c4a4a20' }
 
+"===> Tools
+Plug 'easymotion/vim-easymotion', { 'ref': '342549e' }
+Plug 'mileszs/ack.vim', { 'ref': '36e40f9' }
+Plug 'garbas/vim-snipmate', { 'ref': 'a9802f2' }
+Plug 'honza/vim-snippets', { 'ref': '0fc7fd1' }
+Plug 'tpope/vim-fugitive', { 'ref': '40d78f0' }
+Plug 'michaeljsmith/vim-indent-object', { 'ref': '5c5b24c' }
+Plug 'cyphactor/vim-open-alternate', { 'ref': '3dfc24e' }
+" nerdcommenter and tcomment_vim are alternatives? Investigate the both and
+" end up with only one.
+Plug 'scrooloose/nerdcommenter', { 'ref': 'e679d8a' }
+Plug 'tomtom/tcomment_vim', { 'ref': 'ed93a63' }
+Plug 'tpope/vim-surround', { 'ref': 'e49d6c2' }
+Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'less', 'sass'], 'ref': 'afaacf5' }
+Plug 'terryma/vim-multiple-cursors', { 'ref': 'b781b14' }
+" Perform all your vim insert mode completions with Tab
+Plug 'ervandew/supertab', { 'ref': '40fe711' }
+" endwise.vim: wisely add `end` in ruby, endfunction/endif/more in vim script,
+Plug 'tpope/vim-endwise', { 'ref': 'c714a26' }
+" Vim sugar for the UNIX shell commands that need it the most.
+Plug 'tpope/vim-eunuch', { 'ref': '0971b4c' }
+" A Narrow Region Plugin for vim (like Emacs Narrow Region)
+Plug 'chrisbra/NrrwRgn', { 'ref': '9a87f0c' }
+" Refactoring tool for Ruby in vim!
+Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby', 'ref': '6447a4d' }
+" A vim plugin that simplifies the transition between multiline and single-line code
+Plug 'AndrewRadev/splitjoin.vim', { 'ref': 'b134bdb' }
+Plug 'noprompt/vim-yardoc', { 'for': 'ruby', 'ref': '0087f99' }
+Plug 'slashmili/alchemist.vim', { 'for': 'elixir', 'ref': 'd15033c' }
+Plug 'chrisbra/csv.vim', { 'for': 'csv', 'ref': '14eb57c' }
+"===> Langs
+Plug 'elixir-lang/vim-elixir', { 'for': 'elixir', 'ref': 'e49da51' }
+Plug 'jimenezrick/vimerl', { 'for': ['elixir', 'erlang'], 'ref': '536f7e2' }
+Plug 'tpope/vim-git', { 'ref': 'cdb8554' }
+Plug 'tpope/vim-haml', { 'for': 'haml', 'ref': 'd580aa3' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript', 'ref': '35da051' }
+Plug 'elzr/vim-json', { 'for': 'json', 'ref': '3727f08' }
+Plug 'groenewege/vim-less', { 'for': 'less', 'ref': '6e818d5' }
+Plug 'tpope/vim-markdown', { 'for': 'markdown', 'ref': 'e2d7fcd' }
+Plug 'shime/vim-livedown', { 'ref': '9a881c4ef7113df6d6f81830da8b07c0462ddbf9', 'for': 'markdown' }
+Plug 'tpope/vim-rails', { 'for': 'ruby', 'ref': 'a3b6d49' }
+Plug 'hallison/vim-rdoc', { 'for': 'ruby', 'ref': 'a433c97' }
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby', 'ref': '71f5df7' }
+Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'sass'], 'ref': '4461789' }
+Plug 'slim-template/vim-slim', { 'for': ['slim'], 'ref': 'b19d372' }
+Plug 'unifieddialog/vim-rspec-focus', { 'ref': 'bfa0265b3c38e03ffda492b3d59b42efae569130', 'for': 'ruby' }
+Plug 'ngmy/vim-rubocop', { 'for': 'ruby', 'ref': '1c57918086d22cc9db829125f6b78226feae86a3' }
 call plug#end()
 
 let mapleader = ","
