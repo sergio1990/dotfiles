@@ -54,35 +54,38 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'sass'] }
 Plug 'slim-template/vim-slim', { 'for': ['slim'] }
 Plug 'unifieddialog/vim-rspec-focus', { 'ref': 'bfa0265b3c38e03ffda492b3d59b42efae569130', 'for': 'ruby' }
+Plug 'ngmy/vim-rubocop', { 'for': 'ruby', 'ref': '1c57918086d22cc9db829125f6b78226feae86a3' }
 "===> Themes
-Plug 'altercation/vim-colors-solarized'
+Plug 'vim-airline/vim-airline-themes', { 'ref': 'd60b344fd04d322749354e96660735a23df461ba' }
+Plug 'altercation/vim-colors-solarized', { 'ref': '528a59f26d12278698bb946f8fb82a63711eec21' }
 
 call plug#end()
 
 let mapleader = ","
 syntax enable
 
-let g:airline_powerline_fonts = 1
-
+" GUI setupping
 if !has("gui_running")
   set term=xterm-256color
 endif
 
 set background=dark
-" For valid color presenting in iTerm2 with solarized color preset
-let g:solarized_termcolors = 16
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
-colorscheme solarized
-color solarized
-
 set guifont=Inconsolata\ for\ Powerline:h12
-let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 set termencoding=utf-8
 
+colorscheme solarized
+color solarized
+
+let g:airline_powerline_fonts = 1
 let g:airline_theme = "solarized"
 
+"" For valid color presenting in iTerm2 with solarized color preset
+let g:solarized_termcolors = 16
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+
+let g:Powerline_symbols = 'fancy'
 " END GUI setupping
 
 "====== Control NERDTree
