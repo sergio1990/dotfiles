@@ -108,6 +108,7 @@ set expandtab
 
 "====== Control line numbering
 set number
+set relativenumber
 
 function! NumberToggle()
   if(&relativenumber == 1)
