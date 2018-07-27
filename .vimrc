@@ -11,6 +11,7 @@ Plug 'jszakmeister/vim-togglecursor', { 'ref': 'b1acd53' }
 Plug 'vim-airline/vim-airline-themes', { 'ref': 'd60b344fd04d322749354e96660735a23df461ba' }
 Plug 'altercation/vim-colors-solarized', { 'ref': '528a59f26d12278698bb946f8fb82a63711eec21' }
 Plug 'vim-airline/vim-airline', { 'ref': 'c4a4a20' }
+Plug 'morhetz/gruvbox', { 'ref': 'cb4e7a5643f7d2dd40e694bcbd28c4b89b185e86'}
 
 "===> Tools
 Plug 'easymotion/vim-easymotion', { 'ref': '342549e' }
@@ -76,8 +77,8 @@ set guifont=Inconsolata\ for\ Powerline:h12
 set encoding=utf-8
 set termencoding=utf-8
 
-colorscheme solarized
-color solarized
+colorscheme gruvbox
+color gruvbox
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme = "solarized"
@@ -86,6 +87,8 @@ let g:airline_theme = "solarized"
 let g:solarized_termcolors = 16
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
+
+let g:gruvbox_contrast_dark = "soft"
 
 let g:Powerline_symbols = 'fancy'
 " END GUI setupping
