@@ -81,7 +81,7 @@ colorscheme gruvbox
 color gruvbox
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme = "solarized"
+let g:airline_theme = "gruvbox"
 
 "" For valid color presenting in iTerm2 with solarized color preset
 let g:solarized_termcolors = 16
