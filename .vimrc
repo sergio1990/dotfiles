@@ -50,7 +50,7 @@ Plug 'elixir-lang/vim-elixir', { 'for': 'elixir', 'ref': 'e49da51' }
 Plug 'jimenezrick/vimerl', { 'for': ['elixir', 'erlang'], 'ref': '536f7e2' }
 Plug 'tpope/vim-git', { 'ref': 'cdb8554' }
 Plug 'tpope/vim-haml', { 'for': 'haml', 'ref': 'd580aa3' }
-Plug 'pangloss/vim-javascript', { 'for': 'javascript', 'ref': '35da051' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript', 'ref': '39e332a3c36c0115e1eab85c34cf121b7585869d' }
 Plug 'elzr/vim-json', { 'for': 'json', 'ref': '3727f08' }
 Plug 'groenewege/vim-less', { 'for': 'less', 'ref': '6e818d5' }
 Plug 'tpope/vim-markdown', { 'for': 'markdown', 'ref': 'e2d7fcd' }
@@ -191,3 +191,9 @@ nnoremap <Leader>vr :source $MYVIMRC<CR>
 " vim-rspec-focus
 nnoremap <leader>af :AddFocusTag<CR>
 nnoremap <leader>raf :RemoveAllFocusTags<CR>
+
+let g:javascript_plugin_jsdoc = 1
+
+let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\v[\/]node_modules$',
+      \ }
