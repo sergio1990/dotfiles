@@ -14,6 +14,7 @@ Plug 'vim-airline/vim-airline', { 'ref': 'c4a4a20' }
 Plug 'morhetz/gruvbox', { 'ref': 'cb4e7a5643f7d2dd40e694bcbd28c4b89b185e86'}
 
 "===> Tools
+Plug 'w0rp/ale', { 'ref': 'fc94fd4deb59c4dc6882aa73bd08c721d33facea' }
 Plug 'easymotion/vim-easymotion', { 'ref': '342549e' }
 Plug 'mileszs/ack.vim', { 'ref': '36e40f9' }
 Plug 'garbas/vim-snipmate', { 'ref': 'a9802f2' }
@@ -192,8 +193,15 @@ nnoremap <Leader>vr :source $MYVIMRC<CR>
 nnoremap <leader>af :AddFocusTag<CR>
 nnoremap <leader>raf :RemoveAllFocusTags<CR>
 
+" Enable the JSDoc syntax highlighting
 let g:javascript_plugin_jsdoc = 1
 
+" Configure ctrlp to ignore some paths to search inside them
 let g:ctrlp_custom_ignore = {
       \ 'dir':  '\v[\/]node_modules$',
       \ }
+
+" ALE configuration
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+let g:ale_open_list = 1
