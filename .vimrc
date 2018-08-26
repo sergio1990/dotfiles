@@ -20,7 +20,6 @@ Plug 'mileszs/ack.vim', { 'ref': '36e40f9' }
 Plug 'garbas/vim-snipmate', { 'ref': 'a9802f2' }
 Plug 'honza/vim-snippets', { 'ref': '0fc7fd1' }
 Plug 'tpope/vim-fugitive', { 'ref': '40d78f0' }
-Plug 'airblade/vim-gitgutter', { 'ref': 'a7206c41fc174f576b3f7085d48319dbdad760a5' }
 Plug 'michaeljsmith/vim-indent-object', { 'ref': '5c5b24c' }
 Plug 'cyphactor/vim-open-alternate', { 'ref': '3dfc24e' }
 Plug 'Raimondi/delimitMate', { 'ref': '728b57a6564c1d2bdfb9b9e0f2f8c5ba3d7e0c5c' }
