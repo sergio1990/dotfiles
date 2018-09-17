@@ -62,6 +62,7 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss', 'sass'], 'ref': '4461789' }
 Plug 'slim-template/vim-slim', { 'for': ['slim'], 'ref': 'b19d372' }
 Plug 'unifieddialog/vim-rspec-focus', { 'ref': 'bfa0265b3c38e03ffda492b3d59b42efae569130', 'for': 'ruby' }
 Plug 'ngmy/vim-rubocop', { 'for': 'ruby', 'ref': '1c57918086d22cc9db829125f6b78226feae86a3' }
+Plug 'leafgarland/typescript-vim', { 'ref': 'db131b8cd42973ed26928e9e445c1a745a98cff8' }
 call plug#end()
 
 let mapleader = ","
@@ -89,6 +90,7 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 
 let g:gruvbox_contrast_dark = "soft"
+let g:gruvbox_contrast_light = "soft"
 
 let g:Powerline_symbols = 'fancy'
 " END GUI setupping
