@@ -63,6 +63,8 @@ Plug 'slim-template/vim-slim', { 'for': ['slim'], 'ref': 'b19d372' }
 Plug 'unifieddialog/vim-rspec-focus', { 'ref': 'bfa0265b3c38e03ffda492b3d59b42efae569130', 'for': 'ruby' }
 Plug 'ngmy/vim-rubocop', { 'for': 'ruby', 'ref': '1c57918086d22cc9db829125f6b78226feae86a3' }
 Plug 'leafgarland/typescript-vim', { 'ref': 'db131b8cd42973ed26928e9e445c1a745a98cff8' }
+Plug 'thoughtbot/vim-rspec', { 'ref': '52a72592b6128f4ef1557bc6e2e3eb014d8b2d38' }
+Plug 'posva/vim-vue'
 call plug#end()
 
 let mapleader = ","
