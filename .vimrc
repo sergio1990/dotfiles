@@ -209,3 +209,5 @@ let g:ale_lint_on_enter = 0
 
 set exrc
 set secure
+set noswapfile
+set dir=~/tmp
