@@ -192,6 +192,9 @@ endif
 " Reload vimr configuration file
 nnoremap <Leader>vr :source $MYVIMRC<CR>
 
+" The handy way to clear the highlighted searches
+nmap <silent> ./ :nohlsearch<CR>
+
 " vim-rspec-focus
 nnoremap <leader>af :AddFocusTag<CR>
 nnoremap <leader>raf :RemoveAllFocusTags<CR>
