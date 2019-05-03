@@ -206,6 +206,8 @@ let g:javascript_plugin_jsdoc = 1
 let g:ctrlp_custom_ignore = {
       \ 'dir':  '\v[\/]node_modules$',
       \ }
+" Start seeking for the path only 250ms after entering is completed
+let g:ctrlp_lazy_update = 1
 
 " ALE configuration
 let g:ale_set_loclist = 0
