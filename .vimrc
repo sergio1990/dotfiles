@@ -8,13 +8,11 @@ Plug 'kien/ctrlp.vim', { 'ref': '564176f' }
 Plug 'jszakmeister/vim-togglecursor', { 'ref': 'b1acd53' }
 
 "===> GUI & Themes
-Plug 'vim-airline/vim-airline-themes', { 'ref': 'd60b344fd04d322749354e96660735a23df461ba' }
-Plug 'altercation/vim-colors-solarized', { 'ref': '528a59f26d12278698bb946f8fb82a63711eec21' }
 Plug 'vim-airline/vim-airline', { 'ref': 'c4a4a20' }
 Plug 'morhetz/gruvbox', { 'ref': 'cb4e7a5643f7d2dd40e694bcbd28c4b89b185e86'}
 
 "===> Tools
-Plug 'w0rp/ale', { 'ref': 'fc94fd4deb59c4dc6882aa73bd08c721d33facea' }
+Plug 'w0rp/ale', { 'ref': '89db85121c001fc60787647f012978a2328816a5' }
 Plug 'easymotion/vim-easymotion', { 'ref': '342549e' }
 Plug 'mileszs/ack.vim', { 'ref': '36e40f9' }
 Plug 'garbas/vim-snipmate', { 'ref': 'a9802f2' }
@@ -64,7 +62,10 @@ Plug 'unifieddialog/vim-rspec-focus', { 'ref': 'bfa0265b3c38e03ffda492b3d59b42ef
 Plug 'ngmy/vim-rubocop', { 'for': 'ruby', 'ref': '1c57918086d22cc9db829125f6b78226feae86a3' }
 Plug 'leafgarland/typescript-vim', { 'ref': 'db131b8cd42973ed26928e9e445c1a745a98cff8' }
 Plug 'thoughtbot/vim-rspec', { 'ref': '52a72592b6128f4ef1557bc6e2e3eb014d8b2d38' }
-Plug 'posva/vim-vue'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 call plug#end()
 
 let mapleader = ","
@@ -83,22 +84,16 @@ set termencoding=utf-8
 colorscheme gruvbox
 color gruvbox
 
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 let g:airline_theme = "gruvbox"
 
-"" For valid color presenting in iTerm2 with solarized color preset
-let g:solarized_termcolors = 16
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
-
-let g:gruvbox_contrast_dark = "soft"
+let g:gruvbox_contrast_dark = "medium"
 let g:gruvbox_contrast_light = "soft"
-
-let g:Powerline_symbols = 'fancy'
 " END GUI setupping
 
 "====== Control NERDTree
 nnoremap <Leader>n :NERDTreeToggle<cr>
+nnoremap <Leader>nf :NERDTreeFind<cr>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeMinimalUI = 1
@@ -153,7 +148,7 @@ set nowrap
 " END Stop line wrapping
 
 "====== Colorcolumn
-set colorcolumn=100
+set colorcolumn=120
 " END Colorcolumn
 
 nmap gm :LivedownToggle<CR>
@@ -213,6 +208,7 @@ let g:ctrlp_lazy_update = 1
 let g:ale_set_loclist = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
+nmap gd :ALEGoToDefinition<CR>
 
 set exrc
 set secure
