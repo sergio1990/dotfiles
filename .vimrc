@@ -214,3 +214,7 @@ set exrc
 set secure
 set noswapfile
 set dir=~/tmp
+
+" Copy filename to clipboard
+nnoremap <leader>cs :let @+=expand("%")<CR>
+nnoremap <leader>cl :let @+=expand("%") . ':' . line(".")<CR>
