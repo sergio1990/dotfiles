@@ -212,5 +212,5 @@ set noswapfile
 set dir=~/tmp
 
 " Copy filename to clipboard
-nnoremap <leader>cs :let @+=expand("%")<CR>
-nnoremap <leader>cl :let @+=expand("%") . ':' . line(".")<CR>
+nnoremap <leader>cp :let @+=expand("%")<CR>
+nnoremap <leader>cpl :let @+=expand("%") . ':' . line(".")<CR>
