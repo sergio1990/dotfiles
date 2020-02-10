@@ -80,7 +80,7 @@ set termencoding=utf-8
 colorscheme gruvbox
 color gruvbox
 
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
 let g:airline_theme = "gruvbox"
 
 let g:gruvbox_contrast_dark = "medium"
