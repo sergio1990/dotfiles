@@ -6,6 +6,8 @@ Plug 'tomtom/tlib_vim', { 'ref': 'ced8f3e' }
 Plug 'kien/ctrlp.vim', { 'ref': '564176f' }
 " Toggle the cursor shape in the terminal for Vim
 Plug 'jszakmeister/vim-togglecursor', { 'ref': 'b1acd53' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 "===> GUI & Themes
 Plug 'vim-airline/vim-airline', { 'ref': 'c4a4a20' }
