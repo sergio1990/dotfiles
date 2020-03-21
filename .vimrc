@@ -207,3 +207,9 @@ set dir=~/tmp
 " Copy filename to clipboard
 nnoremap <leader>cp :let @+=expand("%")<CR>
 nnoremap <leader>cpl :let @+=expand("%") . ':' . line(".")<CR>
+
+" fzf configuration
+let g:fzf_command_prefix = 'Fzf'
+
+nnoremap <silent><leader>o :FzfFiles<CR>
+nnoremap <silent><leader>O :FzfFiles!<CR>
