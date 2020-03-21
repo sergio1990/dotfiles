@@ -3,7 +3,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'ref': 'cc60495' }
 Plug 'marcweber/vim-addon-mw-utils', { 'ref': '295862b'}
 Plug 'tomtom/tlib_vim', { 'ref': 'ced8f3e' }
-Plug 'kien/ctrlp.vim', { 'ref': '564176f' }
 " Toggle the cursor shape in the terminal for Vim
 Plug 'jszakmeister/vim-togglecursor', { 'ref': 'b1acd53' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -193,13 +192,6 @@ nnoremap <leader>raf :RemoveAllFocusTags<CR>
 
 " Enable the JSDoc syntax highlighting
 let g:javascript_plugin_jsdoc = 1
-
-" Configure ctrlp to ignore some paths to search inside them
-let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\v[\/]node_modules$',
-      \ }
-" Start seeking for the path only 250ms after entering is completed
-let g:ctrlp_lazy_update = 1
 
 " ALE configuration
 let g:ale_set_loclist = 0
