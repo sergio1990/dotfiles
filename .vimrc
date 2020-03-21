@@ -16,7 +16,6 @@ Plug 'morhetz/gruvbox', { 'ref': 'cb4e7a5643f7d2dd40e694bcbd28c4b89b185e86'}
 "===> Tools
 Plug 'w0rp/ale', { 'ref': '89db85121c001fc60787647f012978a2328816a5' }
 Plug 'easymotion/vim-easymotion', { 'ref': '342549e' }
-Plug 'mileszs/ack.vim', { 'ref': '36e40f9' }
 Plug 'garbas/vim-snipmate', { 'ref': 'a9802f2' }
 Plug 'honza/vim-snippets', { 'ref': '0fc7fd1' }
 Plug 'tpope/vim-fugitive', { 'ref': '40d78f0' }
