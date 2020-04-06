@@ -198,6 +198,16 @@ let g:ale_set_loclist = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 nmap gd :ALEGoToDefinition<CR>
+let g:ale_linters = {
+      \'javascript': ['eslint'],
+      \'typescript': ['tslint']
+      \}
+let g:ale_linters_ignore = {
+      \'typescript': ['eslint'],
+      \'typescriptreact': ['eslint']
+      \}
+
+
 
 set exrc
 set secure
