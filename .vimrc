@@ -43,6 +43,7 @@ Plug 'AndrewRadev/splitjoin.vim', { 'ref': 'b134bdb' }
 Plug 'noprompt/vim-yardoc', { 'for': 'ruby', 'ref': '0087f99' }
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir', 'ref': 'd15033c' }
 Plug 'chrisbra/csv.vim', { 'for': 'csv', 'ref': '14eb57c' }
+Plug 'mileszs/ack.vim'
 "===> Langs
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir', 'ref': 'e49da51' }
 Plug 'jimenezrick/vimerl', { 'for': ['elixir', 'erlang'], 'ref': '536f7e2' }
@@ -223,3 +224,9 @@ let g:fzf_command_prefix = 'Fzf'
 
 nnoremap <silent><leader>o :FzfFiles<CR>
 nnoremap <silent><leader>O :FzfFiles!<CR>
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep --smart-case'
+endif
+" Mapping shortcut to search via the silver search
+nnoremap <leader>F :Ack!<Space>
