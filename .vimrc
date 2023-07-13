@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
 "===> Core
 Plug 'scrooloose/nerdtree', { 'ref': 'cc60495' }
 Plug 'marcweber/vim-addon-mw-utils', { 'ref': '295862b'}
-Plug 'tomtom/tlib_vim', { 'ref': 'ced8f3e' }
+Plug 'tomtom/tlib_vim', { 'ref': '70c4e222464020edc2809c932b488daaf891eeef' }
 " Toggle the cursor shape in the terminal for Vim
 Plug 'jszakmeister/vim-togglecursor', { 'ref': 'b1acd53' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -13,11 +13,11 @@ Plug 'vim-airline/vim-airline', { 'ref': 'c4a4a20' }
 Plug 'morhetz/gruvbox', { 'ref': 'cb4e7a5643f7d2dd40e694bcbd28c4b89b185e86'}
 
 "===> Tools
-Plug 'w0rp/ale', { 'ref': '89db85121c001fc60787647f012978a2328816a5' }
+Plug 'w0rp/ale', { 'ref': '7ff87a942b8a6c2cf50b7cf34f9b98421508f542' }
 Plug 'easymotion/vim-easymotion', { 'ref': '342549e' }
 Plug 'garbas/vim-snipmate', { 'ref': 'a9802f2' }
 Plug 'honza/vim-snippets', { 'ref': '0fc7fd1' }
-Plug 'tpope/vim-fugitive', { 'ref': '40d78f0' }
+Plug 'tpope/vim-fugitive', { 'ref': '286bf9096de0d74a5b663f2c6d4ae879ef97d93b' }
 Plug 'michaeljsmith/vim-indent-object', { 'ref': '5c5b24c' }
 Plug 'cyphactor/vim-open-alternate', { 'ref': '3dfc24e' }
 Plug 'Raimondi/delimitMate', { 'ref': '728b57a6564c1d2bdfb9b9e0f2f8c5ba3d7e0c5c' }
@@ -199,6 +199,8 @@ let g:ale_set_loclist = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 nmap gd :ALEGoToDefinition<CR>
+nmap gds :ALEGoToDefinitionInSplit<CR>
+nmap gdv :ALEGoToDefinitionInVSplit<CR>
 let g:ale_linters = {
       \'javascript': ['eslint'],
       \'typescript': ['tslint']
@@ -224,9 +226,19 @@ let g:fzf_command_prefix = 'Fzf'
 
 nnoremap <silent><leader>o :FzfFiles<CR>
 nnoremap <silent><leader>O :FzfFiles!<CR>
+nnoremap <silent><leader>t :FzfBTags<CR>
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep --smart-case'
 endif
+
 " Mapping shortcut to search via the silver search
 nnoremap <leader>F :Ack!<Space>
+
+set tags+=.tags
+" The ripper-tags executable is installed with this gem https://github.com/tmm1/ripper-tags
+if executable('ripper-tags')
+  nnoremap <leader>ctr :silent ! ripper-tags -R --exclude=vendor -f .tags<cr>
+endif
+
+let g:snipMate = { 'snippet_version' : 0 }
